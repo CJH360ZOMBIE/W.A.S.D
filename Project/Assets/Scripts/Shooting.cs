@@ -14,8 +14,8 @@ public class Shooting : MonoBehaviour
     public float ReloadTime = 1f;
     public int MaxAmmo = 10;
     public ParticleSystem MuzzleFlash;  
-    public Transform EmptyPoint;
-    public GameObject ShellPrefab;
+    // public Transform EmptyPoint;
+    // public GameObject ShellPrefab;
     public float ExitSpeed = 20f;
 
 
@@ -104,14 +104,14 @@ public class Shooting : MonoBehaviour
 
         void Empty()
     {
-        GameObject bullet = Instantiate(ShellPrefab, EmptyPoint.position, EmptyPoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        // GameObject bullet = Instantiate(ShellPrefab, EmptyPoint.position, EmptyPoint.rotation);
+        Rigidbody2D rb = bulletPrefab.GetComponent<Rigidbody2D>();
         rb.AddForce(Vector3.up * ExitSpeed, ForceMode2D.Impulse); 
     }
 
      void OnBecameInvisible() 
      {
-        Destroy(ShellPrefab);
+        // Destroy(ShellPrefab);
         Destroy(bulletPrefab);
      }
 }
