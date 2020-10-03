@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mground
   - Ground
+  - ground
   layers:
   - Default
   - TransparentFX

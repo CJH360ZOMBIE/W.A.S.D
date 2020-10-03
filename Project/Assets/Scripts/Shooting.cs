@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if(CurrentAmmo < MaxAmmo)
             {
